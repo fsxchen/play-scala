@@ -16,6 +16,11 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.0.0
 libraryDependencies += "io.gatling.highcharts" % "gatling-charts-highcharts" % "2.2.2" % Test
 libraryDependencies += "io.gatling" % "gatling-test-framework" % "2.2.2" % Test
 
+libraryDependencies ++= Seq(
+  "com.typesafe.play" %% "play-slick" % "3.0.0",
+  "com.typesafe.play" %% "play-slick-evolutions" % "3.0.0"
+)
+
 // The Play project itself
 lazy val root = (project in file("."))
   .enablePlugins(Common, PlayScala, GatlingPlugin)
